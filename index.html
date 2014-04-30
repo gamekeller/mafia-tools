@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mafia Tools · Gamekeller</title>
+    <link href="//cdn.jsdelivr.net/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script data-main="js/app" src="//cdn.jsdelivr.net/requirejs/2.1.11/require.min.js"></script>
+  </head>
+  <body>
+    <div id="tab-nav" class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs">
+            <li><a href="#assignment" data-toggle="tab">Rollenzuteilung</a></li>
+            <li class="active"><a href="#stopwatch" data-toggle="tab">Stoppuhr</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-content">
+      <div id="assignment" class="tab-pane container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Spieler <small>(Ein Spieler pro Zeile; keine Namen doppelt)</small></h2>
+            <textarea id="players" class="form-control mousetrap"></textarea>
+          </div>
+          <div class="col-md-6">
+            <h2>Rollen <small>(Eine Rolle pro Zeile)</small></h2>
+            <textarea id="roles" class="form-control mousetrap"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <button type="button" id="assign" class="btn btn-lg btn-primary" data-loading-text="Lade Daten..." data-failed-text="Fehlgeschlagen">Zuordnen</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <pre id="output" class="hide"></pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="stopwatch" class="tab-pane active container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 id="stopwatch-header">Stoppuhr <small>Lautstärke</small></h2>
+            <select id="stopwatch-volume">
+              <option value="0">0</option>
+              <option value="0.25">0.25</option>
+              <option value="0.5">0.5</option>
+              <option value="0.75">0.75</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <input type="text" id="stopwatch-minutes" value="00"><span id="stopwatch-seperator"> : </span><input type="text" id="stopwatch-seconds" value="00">
+          </div>
+        </div>
+        <div class="row">
+          <div id="stopwatch-btns" class="col-xs-12 text-center">
+            <button type="button" id="stopwatch-start" class="btn btn-primary" data-counting-text="Pausieren">Starten</button>
+            <button type="button" id="stopwatch-reset" class="btn btn-default">Zurücksetzen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <iframe id="documentation" src="http://mafia.gamekeller.net/" class="hide"></iframe>
+  </body>
+</html>
