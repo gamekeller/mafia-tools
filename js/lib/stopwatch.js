@@ -103,7 +103,7 @@ define([
   Timer.prototype.tick = function() {
     if(this.current-- <= 0) {
       clearInterval(this.interval);
-      this.reset();
+      return this.reset();
     }
 
     if(this.current <= 10 && this.current >= 0) {
