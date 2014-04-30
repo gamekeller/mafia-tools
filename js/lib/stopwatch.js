@@ -35,6 +35,7 @@ define([
     this.$resetBtn = resetBtn;
     this.$minsField = minsField;
     this.$secsField = secsField;
+    this.$fields = this.$minsField.add(this.$secsField);
 
     this.active = false;
     this.interval = 0;
@@ -74,6 +75,7 @@ define([
     this.interval = setInterval(_.bindKey(this, 'tick'), 1000);
 
     this.active = true;
+    this.$fields.attr('readonly', '');
     this.$startBtn.button('counting');
     this.updateFields();
   };
@@ -84,6 +86,7 @@ define([
     }
 
     this.active = false;
+    this.$fields.removeAttr('readonly');
     this.$startBtn.button('reset');
   };
 
