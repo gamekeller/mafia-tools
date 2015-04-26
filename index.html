@@ -59,13 +59,17 @@
         </div>
         <div class="row">
           <div class="col-xs-12 text-center">
+            <div id="stopwatch-quickstart">
+              <button type="button" data-time="30" class="btn btn-default">30s</button>
+              <button type="button" data-time="300" class="btn btn-default">5m</button>
+              <button type="button" data-time="420" class="btn btn-default">7m</button>
+              <button type="button" data-time="600" class="btn btn-default">10m</button>
+            </div>
             <input type="text" id="stopwatch-minutes" value="00"><span id="stopwatch-seperator"> : </span><input type="text" id="stopwatch-seconds" value="00">
-          </div>
-        </div>
-        <div class="row">
-          <div id="stopwatch-btns" class="col-xs-12 text-center">
-            <button type="button" id="stopwatch-start" class="btn btn-primary" data-counting-text="Pausieren">Starten</button>
-            <button type="button" id="stopwatch-reset" class="btn btn-default">Zurücksetzen</button>
+            <div id="stopwatch-btns" class="col-xs-12">
+              <button type="button" id="stopwatch-start" class="btn btn-primary" data-counting-text="Pausieren">Starten</button>
+              <button type="button" id="stopwatch-reset" class="btn btn-default">Zurücksetzen</button>
+            </div>
           </div>
         </div>
       </div>
