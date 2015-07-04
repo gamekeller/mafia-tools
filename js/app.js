@@ -13,4 +13,4 @@ require.config({
   }
 });
 
-require(['app/assignment', 'app/docs', 'app/stopwatch']);
+require(['app/assignment', 'app/docs', 'app/stopwatch', 'app/trickster']);

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mafia Tools · Gamekeller</title>
-    <link href="//cdn.jsdelivr.net/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <script data-main="js/app" src="//cdn.jsdelivr.net/requirejs/2.1.11/require.min.js"></script>
+    <script data-main="js/app" src="//cdn.jsdelivr.net/requirejs/2/require.min.js"></script>
   </head>
   <body>
     <div id="tab-nav" class="container">
@@ -15,6 +15,7 @@
           <ul class="nav nav-tabs">
             <li><a href="#assignment" data-toggle="tab">Rollenzuteilung</a></li>
             <li class="active"><a href="#stopwatch" data-toggle="tab">Stoppuhr</a></li>
+            <li><a href="#trickster-generator" data-toggle="tab">Trickster Generator</a></li>
           </ul>
         </div>
       </div>
@@ -70,6 +71,22 @@
               <button type="button" id="stopwatch-start" class="btn btn-primary" data-counting-text="Pausieren">Starten</button>
               <button type="button" id="stopwatch-reset" class="btn btn-default">Zurücksetzen</button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="trickster-generator" class="tab-pane container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Trickster Generator</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h3>Was passiert mit den Opfern?</h3>
+            <p id="trickster-victim-one"></p>
+            <p id="trickster-victim-two"></p>
+            <button type="button" id="trickster-generate" class="btn btn-primary" data-loading-text="Lade Daten..." data-failed-text="Fehlgeschlagen">Generieren</button>
           </div>
         </div>
       </div>
